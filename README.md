@@ -28,7 +28,7 @@ All payments are processed through secure, third-party platforms. We do not have
 
 Policy Changes
 
-We may update this Privacy Policy from time to time. Any changes will be communicated within the app, and the effective date will be revised. We encourage you to review this policy periodically.
+We may update this Privacy Policy from time to time. We encourage you to review this policy periodically.
 
 Contact Us
 
