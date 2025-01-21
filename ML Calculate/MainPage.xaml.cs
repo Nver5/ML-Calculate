@@ -8,8 +8,8 @@ namespace ML_Calculate
             int delete = 0;
             public MainPage(MainViewModel vm)
             {
-                InitializeComponent();
-                BindingContext = vm;
+                InitializeComponent();  // Initialize the UI components defined in the XAML file
+                BindingContext = vm;   // Set the data context to the provided ViewModel
             }
             private void OnResetCounterClicked(object sender, EventArgs e)
             {
@@ -25,21 +25,21 @@ namespace ML_Calculate
             private void OnCounterClicked(object sender, EventArgs e)
         {
             
-                count++;
+                count++; //Increment the count
                 if (count == 1)
-                    CounterBtn.Text = $"Add {count}";
+                    CounterBtn.Text = $"Add {count}"; // Update the button text for count = 1
                 else
-                    CounterBtn.Text = $"Add {count}";
-                SemanticScreenReader.Announce(CounterBtn.Text);
+                    CounterBtn.Text = $"Add {count}"; // Update the button text for count > 1
+                SemanticScreenReader.Announce(CounterBtn.Text); // Announce the updated button text for accessibility
             
         }
         private void OnDeleteItemCounterClicked(object sender, EventArgs e)
             {
-                delete++;
-                count -= delete;
-                CounterBtn.Text = $"Add {count}";
-                SemanticScreenReader.Announce(CounterBtn.Text);
-                delete = 0;
+                delete++; // Increment the delete count
+                count -= delete; // Subtract the delete counter from the main count
+                CounterBtn.Text = $"Add {count}"; // Update button text with the new count
+                SemanticScreenReader.Announce(CounterBtn.Text); // Announce the updated  text for accessibility
+                delete = 0; // Reset the delete counter
 
             }
 
