@@ -40,7 +40,8 @@
 
         <CollectionView Grid.Row="2" Grid.ColumnSpan="2"
                     ItemsSource="{Binding Items}"
-                    SelectionMode="None">
+                    SelectionMode="None"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackgroundColor},Dark={StaticResource DarkBackgroundColor}}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type x:String}">
                     <SwipeView>
@@ -63,7 +64,8 @@
                                     CommandParameter="{Binding .}"/>
                                 </Frame.GestureRecognizers>
                                 <Label Text="{Binding .}"
-                                   FontSize="24"/>
+                                   FontSize="24"
+                                   TextColor="{AppThemeBinding Light={StaticResource LightTextColor},Dark={StaticResource DarkTextColor}}"/>
                             </Frame>
                         </Grid>
                     </SwipeView>
