@@ -14,9 +14,11 @@ namespace ML_Calculate.ViewModel
 
       public partial class MainViewModel : ObservableObject
         {
+            
         public MainViewModel()
         {
             Items = [];
+            
         }
 
             [ObservableProperty]
@@ -32,13 +34,13 @@ namespace ML_Calculate.ViewModel
             void Add()
             {
                 if (string.IsNullOrWhiteSpace(Text))
-                    return;
-
+                   return;
                 Items.Add(Text);
-
                 Text = string.Empty;
 
             }
+            
+            
 
             [RelayCommand]
             void Delete(string s)
@@ -59,5 +61,6 @@ namespace ML_Calculate.ViewModel
            
         }
 }
+
 
 
